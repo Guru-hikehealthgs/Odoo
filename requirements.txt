@@ -4,6 +4,7 @@ beautifulsoup4==4.13.3
 cbor2==5.6.2
 certifi==2025.1.31
 cffi==1.17.1
+babel==2.11.0
 chardet==5.2.0
 charset-normalizer==3.4.1
 colorama==0.4.6
