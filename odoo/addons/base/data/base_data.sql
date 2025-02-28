@@ -42,31 +42,31 @@ CREATE TABLE ir_module_category (
     primary key(id)
 );
 
-CREATE TABLE ir_module_module (
-    id serial NOT NULL,
-    create_uid integer, -- references res_users on delete set null,
-    create_date timestamp without time zone,
-    write_date timestamp without time zone,
-    write_uid integer, -- references res_users on delete set null,
-    website character varying,
-    summary jsonb,
-    name character varying NOT NULL,
-    author character varying,
-    icon varchar,
-    state character varying(16),
-    latest_version character varying,
-    shortdesc jsonb,
-    category_id integer REFERENCES ir_module_category ON DELETE SET NULL,
-    description jsonb,
-    application boolean default False,
-    demo boolean default False,
-    web boolean DEFAULT FALSE,
-    license character varying(32),
-    sequence integer DEFAULT 100,
-    auto_install boolean default False,
-    to_buy boolean default False,
-    primary key(id)
-);
+-- CREATE TABLE ir_module_module (
+--     id serial NOT NULL,
+--     create_uid integer, -- references res_users on delete set null,
+--     create_date timestamp without time zone,
+--     write_date timestamp without time zone,
+--     write_uid integer, -- references res_users on delete set null,
+--     website character varying,
+--     summary jsonb,
+--     name character varying NOT NULL,
+--     author character varying,
+--     icon varchar,
+--     state character varying(16),
+--     latest_version character varying,
+--     shortdesc jsonb,
+--     category_id integer REFERENCES ir_module_category ON DELETE SET NULL,
+--     description jsonb,
+--     application boolean default False,
+--     demo boolean default False,
+--     web boolean DEFAULT FALSE,
+--     license character varying(32),
+--     sequence integer DEFAULT 100,
+--     auto_install boolean default False,
+--     to_buy boolean default False,
+--     primary key(id)
+-- );
 
 CREATE TABLE ir_module_module_dependency (
     id serial NOT NULL,
